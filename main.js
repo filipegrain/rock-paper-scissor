@@ -5,7 +5,7 @@ const gameOptions = new Map([
 ]);
 let humanPoints = 0;
 let computerPoints = 0;
-const DEFAULT_FONT_SIZE = "2em";
+const DEFAULT_FONT_SIZE = "1.6em";
 const DEFAULT_FONT_SIZE_HIGHLIGHT = "4em";
 
 function newGame() {
@@ -75,7 +75,7 @@ function drawGameResult(playerOption, computerOption, gameResult) {
       const gameScreen = document.querySelector("#game-screen")
       gameScreen.replaceChildren();
 
-      const playerDrawing = new Image(300);
+      const playerDrawing = new Image(200);
       playerDrawing.style.transform = 'scaleX(-1)'
       if (gameResult === "w") {
             if (playerOption === "r") {
@@ -96,7 +96,7 @@ function drawGameResult(playerOption, computerOption, gameResult) {
       }
       gameScreen.appendChild(playerDrawing)
 
-      const computerDrawing = new Image(300);
+      const computerDrawing = new Image(200);
       if (gameResult === "l") {
             if (computerOption === "r") {
                   computerDrawing.src = "images/rw.png";
